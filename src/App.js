@@ -1,25 +1,24 @@
 //import { useSpring, animated, config } from "react-spring";
 import React from 'react'
-import ReactDOM from 'react-dom'
-import { useEffect, useState } from "react";
+//import { useEffect, useState } from "react";
 import './App.scss'
 
-function wave({ d, color }) {
+/*function wave({ d, color }) {
     return (
         <path
             fill = {color}
             d={d}
         />
     );
-}
+}*/
 
 
 
 function App() {
-    const [visible, setVisible] = useState(false);
+    /*const [visible, setVisible] = useState(false);
     setInterval(() => {
         this.setVisible = !this.visible;
-    }, 1000)
+    }, 1000)*/
     return (
         <div className="container">
             <div className="pages">
