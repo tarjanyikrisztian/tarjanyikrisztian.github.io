@@ -1,14 +1,15 @@
-//@import "~bootstrap/scss/bootstrap";
+@import '../node_modules/mdb-ui-kit/css/mdb.min.css';
+
 
 body {
     margin: 0;
-    font-family: 'Montserrat';
+    font-family: 'Press Start 2P';
     color: white;
     overflow-x: hidden;
     height: 100vh;
 }
 
-.container {
+.containers {
     height: 100vh;
     overflow-y: scroll;
     scroll-snap-type:y proximity;
@@ -61,7 +62,10 @@ body {
     justify-content: center;
 
     &:nth-child(1) {
-        background-color: darkolivegreen;
+        background-color: transparent;
+        font-size:20pt;
+        margin: 0;
+        padding: 0;
     }
 
     &:nth-child(2) {
@@ -75,17 +79,17 @@ body {
 
     p {
         margin: 0;
-        font-size: 50pt;
-    }
-
-    .cd{
         font-size: 30pt;
     }
 
-    .kr {
+    .cd{
+        font-size: 20pt;
+    }
+
+    /*.kr {
         background-color: white;
         color: #001122;
-    }
+    }*/
 }
 
 .waves {

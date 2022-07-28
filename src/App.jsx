@@ -1,69 +1,65 @@
 //import { useSpring, animated, config } from "react-spring";
 import { useEffect, useState } from "react";
-import './App.scss'
-
-function wave({ d, color }) {
-    return (
-        <path
-            fill = {color}
-            d={d}
-        />
-    );
+import './App.scss';
+import './adj';
+function today(){
+    
 }
 
 
-
 function App() {
-    const [visible, setVisible] = useState(false);
-    setInterval(() => {
-        this.setVisible = !this.visible;
-    }, 1000)
+    //let adjectives = adj;
+    let adjectives = [
+        "a happy",
+        "a peaceful",
+        "a wonderful",
+        "an inspirational",
+        "a bright",
+        "an exciting",
+        "a joyful",
+        "a blissful",
+        "a delightful",
+        "a cheerful",
+        "a thrilled",
+        "a sunny",
+        "a jolly",
+        "a calm",
+        "an electrifying",
+        "a lovely",
+        "a rejuvenating",
+        "an euphoric",
+        "a glorious",
+        "a jubilant",
+        "a relaxing",
+        "a beautiful",
+        "an awesome",
+        "an enchanting",
+        "an enthralling",
+        "a splendid",
+        "a pleasant",
+        "a marvelous"
+    ];
+    let rnd = Math.floor((Math.random() * adjectives.length));
+    /*setInterval(function(){   
+        rnd = Math.floor((Math.random() * adjectives.length)); 
+     }, 5000);*/
+    
+    let day = new Date().getDay()
+    let today = "";
+    if (day == 1) today = "monday";
+    else if (day == 2) today = "tuesday";
+    else if (day == 3) today = "wednesday";
+    else if (day == 4) today = "thursday";
+    else if (day == 5) today = "friday";
+    else if (day == 6) today = "saturday";
+    else today = "sunday";
+
     return (
-        <div className="container">
+        <div className="containers">
             <div className="pages">
-                <div className='waves'>
-                {/*<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 1080" className="waves">
-                        <wave
-                            color="#FA7268"
-                            d="M750.92,1080c-62.65,0-124.86,0-187.51,0c-62.5,0-125.3,0-187.8,0c-62.65,0-124.86,0-187.51,0
-	                        c-62.5,0-125.3,0-156.7,0H0l0-405.98l31.4-2.63c31.4-2.77,94.19-8.03,156.7,2.63c62.65,10.66,124.86,37.53,187.51,38.99
-	                        c62.5,1.46,125.3-22.49,187.8-15.92C626.06,703.66,761.35,758.74,824,764C886.5,769.4,813.43,1080,750.92,1080z"
-                        />
-                        <wave
-                            color="#FA7268"
-                            d="M750.92,1080c-62.65,0-124.86,0-187.51,0c-62.5,0-125.3,0-187.8,0c-62.65,0-124.86,0-187.51,0
-	                        c-62.5,0-125.3,0-156.7,0H0l0-405.98l31.4-2.63c31.4-2.77,94.19-8.03,156.7,2.63c62.65,10.66,124.86,37.53,187.51,38.99
-	                        c62.5,1.46,125.3-22.49,187.8-15.92C626.06,703.66,761.35,758.74,824,764C886.5,769.4,813.43,1080,750.92,1080z"
-                        />
-                        <wave
-                            color="#FA7268"
-                            d="M750.92,1080c-62.65,0-124.86,0-187.51,0c-62.5,0-125.3,0-187.8,0c-62.65,0-124.86,0-187.51,0
-	                        c-62.5,0-125.3,0-156.7,0H0l0-405.98l31.4-2.63c31.4-2.77,94.19-8.03,156.7,2.63c62.65,10.66,124.86,37.53,187.51,38.99
-	                        c62.5,1.46,125.3-22.49,187.8-15.92C626.06,703.66,761.35,758.74,824,764C886.5,769.4,813.43,1080,750.92,1080z"
-                        />
-                        <wave
-                            color="#FA7268"
-                            d="M750.92,1080c-62.65,0-124.86,0-187.51,0c-62.5,0-125.3,0-187.8,0c-62.65,0-124.86,0-187.51,0
-	                        c-62.5,0-125.3,0-156.7,0H0l0-405.98l31.4-2.63c31.4-2.77,94.19-8.03,156.7,2.63c62.65,10.66,124.86,37.53,187.51,38.99
-	                        c62.5,1.46,125.3-22.49,187.8-15.92C626.06,703.66,761.35,758.74,824,764C886.5,769.4,813.43,1080,750.92,1080z"
-                        />
-                        <wave
-                            color="#FA7268"
-                            d="M750.92,1080c-62.65,0-124.86,0-187.51,0c-62.5,0-125.3,0-187.8,0c-62.65,0-124.86,0-187.51,0
-	                        c-62.5,0-125.3,0-156.7,0H0l0-405.98l31.4-2.63c31.4-2.77,94.19-8.03,156.7,2.63c62.65,10.66,124.86,37.53,187.51,38.99
-	                        c62.5,1.46,125.3-22.49,187.8-15.92C626.06,703.66,761.35,758.74,824,764C886.5,769.4,813.43,1080,750.92,1080z"
-                        />
-                        <wave
-                            color="#FA7268"
-                            d="M750.92,1080c-62.65,0-124.86,0-187.51,0c-62.5,0-125.3,0-187.8,0c-62.65,0-124.86,0-187.51,0
-	                        c-62.5,0-125.3,0-156.7,0H0l0-405.98l31.4-2.63c31.4-2.77,94.19-8.03,156.7,2.63c62.65,10.66,124.86,37.53,187.51,38.99
-	                        c62.5,1.46,125.3-22.49,187.8-15.92C626.06,703.66,761.35,758.74,824,764C886.5,769.4,813.43,1080,750.92,1080z"
-                        />
-                    </svg>
-    */}
+                <div className="waves">
                     <div className="name">
-                        <p><b className="kr">Krisztián</b> Tarjányi <span>|</span>
-                        </p>
+                        <p><b className="kr">Krisztián</b> Tarjányi<span>|</span></p>
                         <p className="cd"><i><b>Creative</b> Developer</i></p>
                         <p className="cd"><i>Student</i></p>
                     </div>
@@ -76,14 +72,12 @@ function App() {
             </div>
             <div className="pages">
                 <section className="gridLayout">
-                    <div className="card">HAVE A NICE DAY</div>
+                    <div className="card"><p>Be creative, explore &<br />Have {adjectives[rnd]} {today}!</p></div>
                     <div className="card">CONTACT</div>
                 </section>
             </div>
         </div>
     );
 }
-
-
 
 export default App
