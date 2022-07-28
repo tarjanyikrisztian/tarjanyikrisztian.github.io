@@ -1,4 +1,6 @@
 //import { useSpring, animated, config } from "react-spring";
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { useEffect, useState } from "react";
 import './App.scss'
 
