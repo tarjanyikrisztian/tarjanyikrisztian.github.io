@@ -1,105 +1,105 @@
 //@import "~bootstrap/scss/bootstrap";
 
 body {
-  margin: 0;
-  font-family: 'Montserrat';
-  color: white;
-  overflow-x: hidden;
-  height: 100vh;
+    margin: 0;
+    font-family: 'Montserrat';
+    color: white;
+    overflow-x: hidden;
+    height: 100vh;
 }
 
 .container {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type:y proximity;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type:y proximity;
 }
 
 .pages {
-  height: 100vh;
-  scroll-snap-align: center;
-  display: flex;
+    height: 100vh;
+    scroll-snap-align: center;
+    display: flex;
 
-  &:nth-child(1) {
-      background: linear-gradient(#001122, #001128);
-  }
+    &:nth-child(1) {
+        background: linear-gradient(#001122, #001128);
+    }
 
-  &:nth-child(2) {
-      background: linear-gradient(#001128, #001132);
-      /*align-items: center;
-      justify-content: center;*/
-  }
+    &:nth-child(2) {
+        background: linear-gradient(#001128, #001132);
+        /*align-items: center;
+        justify-content: center;*/
+    }
 
-  &:nth-child(3) {
-      background: linear-gradient(#001132, #001139);
-      align-items: center;
-      justify-content: center;
-  }
+    &:nth-child(3) {
+        background: linear-gradient(#001132, #001139);
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .bio {
-  height: 70vh;
-  width: 60vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 130, 200, 0.5);
-  transform: rotate(180deg);
+    height: 70vh;
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 130, 200, 0.5);
+    transform: rotate(180deg);
 }
 
 .gridLayout {
-  height: 70vh;
-  width: 60vw;
-  gap: 5vh;
-  display: grid;
-  grid-template-rows: 30% 70%;
+    height: 70vh;
+    width: 60vw;
+    gap: 5vh;
+    display: grid;
+    grid-template-rows: 30% 70%;
 
 }
 
 .card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  &:nth-child(1) {
-      background-color: darkolivegreen;
-  }
+    &:nth-child(1) {
+        background-color: darkolivegreen;
+    }
 
-  &:nth-child(2) {
-      background-color: chocolate;
-  }
+    &:nth-child(2) {
+        background-color: chocolate;
+    }
 }
 
 .name {
-  margin-top: 5vh;
-  margin-left: 3vw;
+    margin-top: 5vh;
+    margin-left: 3vw;
 
-  p {
-      margin: 0;
-      font-size: 50pt;
-  }
+    p {
+        margin: 0;
+        font-size: 50pt;
+    }
 
-  .cd{
-      font-size: 30pt;
-  }
+    .cd{
+        font-size: 30pt;
+    }
 
-  .kr {
-      background-color: white;
-      color: #001122;
-  }
+    .kr {
+        background-color: white;
+        color: #001122;
+    }
 }
 
 .waves {
-  aspect-ratio: 1920/1080;
-  width: 100%;
-  background-image: url('./bg-waves.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
+    aspect-ratio: 1920/1080;
+    width: 100%;
+    background-image: url('./bg-waves.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 
-.flip {
-  transform: rotate(180deg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  .flip {
+    transform: rotate(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
