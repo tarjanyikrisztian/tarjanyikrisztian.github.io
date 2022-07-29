@@ -1,6 +1,3 @@
-@import '../node_modules/mdb-ui-kit/css/mdb.min.css';
-
-
 body {
     margin: 0;
     font-family: 'Press Start 2P';
@@ -12,7 +9,8 @@ body {
 .containers {
     height: 100vh;
     overflow-y: scroll;
-    scroll-snap-type:y proximity;
+    overflow-x: hidden;
+    scroll-snap-type: y proximity;
 }
 
 .pages {
@@ -26,8 +24,8 @@ body {
 
     &:nth-child(2) {
         background: linear-gradient(#001128, #001132);
-        /*align-items: center;
-        justify-content: center;*/
+
+
     }
 
     &:nth-child(3) {
@@ -38,22 +36,20 @@ body {
 }
 
 .bio {
-    height: 70vh;
+    height: 75vh;
     width: 60vw;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 130, 200, 0.5);
-    transform: rotate(180deg);
 }
 
 .gridLayout {
-    height: 70vh;
+    height: 75vh;
     width: 60vw;
     gap: 5vh;
     display: grid;
-    grid-template-rows: 30% 70%;
-
+    grid-template-rows: 10% 90%;
 }
 
 .card {
@@ -63,9 +59,16 @@ body {
 
     &:nth-child(1) {
         background-color: transparent;
-        font-size:20pt;
+        font-size: 20pt;
         margin: 0;
-        padding: 0;
+
+        span {
+            color: #d2691e;
+        }
+
+        p {
+            margin: 0;
+        }
     }
 
     &:nth-child(2) {
@@ -82,28 +85,76 @@ body {
         font-size: 30pt;
     }
 
-    .cd{
-        font-size: 20pt;
+    a:hover {
+
+        color: white;
+
     }
 
-    /*.kr {
-        background-color: white;
-        color: #001122;
-    }*/
+    .cd {
+        font-size: 20pt;
+        font-style: italic;
+    }
+    .cdin1 {
+        opacity: 0;
+        transform: translateY(3rem);
+        animation: fadeInUp 1500ms ease 2s forwards;
+    }
+    .cdin2 {
+        opacity: 0;
+        transform: translateY(3rem);
+        animation: fadeInUp 1500ms ease 2500ms forwards;
+    }
+
+    .kr {
+        color: #d2691e;
+    }
+
+    .cursor::after {
+        content: '|';
+        animation: blink 1s step-start infinite;
+
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }
 
 .waves {
-    aspect-ratio: 1920/1080;
-    width: 100%;
+    aspect-ratio: 19/6;
+    width: 100vw;
     background-image: url('./bg-waves.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-  }
-
-  .flip {
-    transform: rotate(180deg);
     display: flex;
+}
+
+.flip {
+    background-image: url('./bg-waves-fliped.svg');
     align-items: center;
     justify-content: center;
+}
+
+@media only screen and (hover: none) and (pointer: coarse) {
+    .gridLayout{
+        width: 100vw;
+    }
+    .bio{
+        width: 100vw;
+    }
+}
+
+a {
+    text-decoration: none !important;
   }
