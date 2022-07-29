@@ -29,7 +29,7 @@ const TypedKr = () => {
 
     return (
         <>
-            <b><a className="kr">{typed}</a></b>{typed2}
+            <b><a className="kr" href='#bio'>{typed}</a></b>{typed2}
         </>
     );
 }

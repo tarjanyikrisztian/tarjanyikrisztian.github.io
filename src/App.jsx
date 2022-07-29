@@ -20,7 +20,7 @@ const App = () => {
                     </div>
                 </div>
             </div>
-            <div className="pages">
+            <div className="pages" id="bio">
                 <div className='waves flip'>
                     <div className="bio">BIO</div>
                 </div>
