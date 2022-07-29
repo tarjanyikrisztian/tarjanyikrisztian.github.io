@@ -27,13 +27,13 @@ const App = () => {
             </div>
             <div className="pages">
                 <section className="gridLayout">
-                    <div className="card">
+                    <div className="card day">
                         <p>
                             Be creative, explore &<br />
                             Have a <span><RandomAdj /></span> <Today />!
                         </p>
                     </div>
-                    <div className="card">contact</div>
+                    <div className="card contact">CONTACT</div>
                 </section>
             </div>
         </div>
