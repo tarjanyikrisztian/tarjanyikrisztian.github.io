@@ -7,37 +7,43 @@ import Today from "./Components/Today";
 
 
 const App = () => {
-    
 
-    return (
-        <div className="containers">
-            <div className="pages">
-                <div className="waves">
-                    <div className="name">
-                        <p className="cursor"><TypedKr /></p>
-                        <p className="cd cdin1"><b>Creative</b> <a className="kr">Developer</a></p>
-                        <p className="cd cdin2"><a className="kr">Student</a></p>
+
+    if (true) {
+        return (
+            <div className="containers">
+                <div className="pages">
+                    <div className="waves">
+                        <div className="name">
+                            <p className="cursor"><TypedKr /></p>
+                            <p className="cd cdin1"><b>Creative</b> <a className="kr">Developer</a></p>
+                            <p className="cd cdin2"><a className="kr">Student</a></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="pages" id="bio">
-                <div className='waves flip'>
-                    <div className="bio">BIO</div>
+                <div className="pages" id="bio">
+                    <div className='waves flip'>
+                        <div className="bio">BIO</div>
+                    </div>
+                </div>
+                <div className="pages">
+                    <section className="gridLayout">
+                        <div className="card day">
+                            <p>
+                                Be creative, explore &<br />
+                                Have a <span><RandomAdj /></span> <Today />!
+                            </p>
+                        </div>
+                        <div className="card contact">CONTACT</div>
+                    </section>
                 </div>
             </div>
-            <div className="pages">
-                <section className="gridLayout">
-                    <div className="card day">
-                        <p>
-                            Be creative, explore &<br />
-                            Have a <span><RandomAdj /></span> <Today />!
-                        </p>
-                    </div>
-                    <div className="card contact">CONTACT</div>
-                </section>
-            </div>
-        </div>
-    );
+        );
+    }
+    else {
+        /*return ();*/
+    }
+
 }
 
 

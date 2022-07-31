@@ -94,11 +94,13 @@ body {
     font-size: 20pt;
     font-style: italic;
 }
+
 .cdin1 {
     opacity: 0;
     transform: translateY(3rem);
     animation: fadeInUp 1500ms ease 2s forwards;
 }
+
 .cdin2 {
     opacity: 0;
     transform: translateY(3rem);
@@ -109,7 +111,7 @@ body {
     color: #d2691e;
 }
 
-.cursor{
+.cursor {
     font-size: 30pt;
 }
 
@@ -149,23 +151,27 @@ body {
 }
 
 @media only screen and (hover: none) and (pointer: coarse) {
-    .gridLayout{
+    .gridLayout {
         width: 100vw;
     }
-    .bio{
+
+    .bio {
         width: 100vw;
     }
-    .cursor{
+
+    .cursor {
         font-size: 22pt;
     }
-    .cd{
+
+    .cd {
         font-size: 16pt;
     }
-    .day{
+
+    .day {
         font-size: 14pt;
     }
 }
 
 a {
     text-decoration: none !important;
-  }
+}
