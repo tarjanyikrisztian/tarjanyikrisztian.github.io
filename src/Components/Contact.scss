@@ -53,12 +53,14 @@
          position: relative;
          display: block;
          margin-bottom: clamp(1.75rem, 1.5rem + 1.25vw, 3rem);
+         
      }
 
      .form-group span {
          font-size: var(--fs-xs);
          position: absolute;
          top: clamp(0.25rem, 0.15rem + 0.5vw, 0.75rem);
+         //padding-left: clamp(0.25rem, 0.15rem + 0.5vw, 0.75rem);;
          transition: all .2s ease;
          transform-origin: 0 0;
          cursor: text;
@@ -66,7 +68,7 @@
 
      .form-control {
          border: none;
-         border-bottom: 2px solid rgb(190, 190, 190);
+         border-bottom: 2px solid rgb(255,255,255,0.7);;
          display: block;
          width: 100%;
          height: clamp(1.25rem, 1rem + 1.25vw, 2.5rem);
@@ -82,6 +84,7 @@
      .form-control:focus+span,
      .form-control:valid+span {
          transform: translateY(-1.5rem) scale(0.9);
+         color: rgb(255,255,255,0.7);
      }
 
      .form-control:focus+span+.border,
@@ -90,8 +93,8 @@
      }
 
      textarea.form-control {
-         padding-top: clamp(0.25rem, 0.15rem + 0.5vw, 0.75rem);
-         padding-bottom: clamp(0.25rem, 0.15rem + 0.5vw, 0.75rem);
+         //padding-top: clamp(0.25rem, 0.15rem + 0.5vw, 0.75rem);
+         //padding-bottom: clamp(0.25rem, 0.15rem + 0.5vw, 0.75rem);
      }
 
      button {

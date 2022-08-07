@@ -1,12 +1,13 @@
 //::-webkit-scrollbar{width: 0;}
 //@supports (scrollbar-color: red blue){* {scrollbar-width: none;}}
 
-:root{
+:root {
     --fs-xl: clamp(2.25rem, 2.15rem + 0.5vw, 2.75rem);
     --fs-l: clamp(1.25rem, 1.1rem + 0.75vw, 2rem);
     --fs-m: clamp(0.75rem, 0.6rem + 0.75vw, 1.5rem);
     --fs-s: clamp(0.5rem, 0.35rem + 0.75vw, 1.25rem);
-    --fs-xs: clamp(0.5rem, 0.4rem + 0.5vw, 1rem);}
+    --fs-xs: clamp(0.5rem, 0.4rem + 0.5vw, 1rem);
+}
 
 body {
     margin: 0;
@@ -22,7 +23,7 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     scroll-snap-type: y proximity;
-    scroll-behavior: smooth;   
+    scroll-behavior: smooth;
 }
 
 .pages {
@@ -30,23 +31,20 @@ body {
     scroll-snap-align: center;
     display: flex;
     position: relative;
-    &:nth-child(3) {
-        align-items: center;
-        justify-content: center;
-    }
 }
 
 .bio {
     margin-left: clamp(0rem, -3.6rem + 18vw, 18rem);
     margin-right: clamp(0rem, -3.6rem + 18vw, 18rem);
-    display:block;
+    display: block;
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 130, 200, 0.5);
     padding: clamp(1rem, 0.2rem + 4vw, 5rem);
     font-size: var(--fs-s);
     line-height: 1.5;
-    p{
+
+    p {
         margin: 0;
     }
 }
@@ -56,7 +54,19 @@ body {
     width: 55vw;
     gap: 5vh;
     display: grid;
-    grid-template-rows: 15% 85%;
+    grid-template-rows: 20% 80%;
+}
+
+.peaks {
+    aspect-ratio: 19/6;
+    width: 100vw;
+    background-image: url('./layered-peaks.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card {
@@ -69,6 +79,7 @@ body {
     background-color: transparent;
     font-size: var(--fs-m);
     margin: 0;
+    padding-bottom: 5rem;
 
     span {
         color: #d2691e;
@@ -80,21 +91,17 @@ body {
 }
 
 .contact {
-    background-image: url('./blob-haikei.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    padding-top: 1rem;
+    padding-top: 2rem;
     padding-left: clamp(1rem, -0.8rem + 9vw, 10rem);
     padding-right: clamp(1rem, -0.8rem + 9vw, 10rem);
     display: inline-block;
-    background-size: cover;
 }
 
 .name {
     margin-top: 5vh;
     margin-left: 3vw;
 
-    p{
+    p {
         margin: 0;
     }
 
@@ -148,6 +155,8 @@ body {
 
 .flip {
     background-image: url('./bg-waves-fliped.svg');
+}
+.biopage{
     align-items: center;
     justify-content: center;
 }
@@ -158,6 +167,7 @@ body {
         width: 100vw;
     }
 }
+
 @media only screen and (max-width: 1700px) {
     .gridLayout {
         grid-template-rows: 25% 75%;
