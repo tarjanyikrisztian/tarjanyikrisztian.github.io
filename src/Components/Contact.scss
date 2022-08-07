@@ -9,12 +9,7 @@
      }
 
      p,
-     h1,
-     h2,
      h3,
-     h4,
-     h5,
-     h6,
      ul {
          margin: 0;
      }
@@ -47,6 +42,11 @@
          font-size: var(--fs-s);
          padding-top: clamp(0.5rem, 0.4rem + 0.5vw, 1rem);
 
+     }
+
+     .contact-text{
+        position: relative;
+        display: block;
      }
 
      .form-group {

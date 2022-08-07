@@ -8,20 +8,15 @@ import Projects from "./Components/Projects";
 const App = ({ }) => {
     return (
         <div className="containers">
-            <motion.div className="pages waves">
-                <NameTitle />
-            </motion.div>
-            <motion.div className="pages waves flip">
-                <Projects />
-            </motion.div>
-            <motion.div className="pages biopage" id="bio">
-                <Bio />
-            </motion.div>
-            <div className="pages peaks">
+            
+            <NameTitle />
 
-                <EndPage />
-                
-            </div>
+            <Projects />
+
+            <Bio />
+
+            <EndPage />
+
         </div>
     );
 }

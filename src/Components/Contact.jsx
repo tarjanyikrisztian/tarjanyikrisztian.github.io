@@ -19,10 +19,9 @@ const Contact = () => {
     };
 
     return (
-        
-        <form ref={form} onSubmit={sendEmail}>
-            <h3>Contact Me</h3>
-            <p>Feel free to write me any feedback, ideas, to have a coffee or even a job offer!</p>
+        <form className="contact-text" ref={form} onSubmit={sendEmail}>
+            <div ><h3>Contact Me</h3>
+            <p>Feel free to write me any feedback, ideas, to have a coffee or even a job offer!</p></div>
             <label className="form-group">
                 <input type="text" name="user_name" className="form-control"  required/>
                 <span>Your Name</span>
