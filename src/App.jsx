@@ -3,6 +3,7 @@ import './App.scss';
 import EndPage from "./Components/EndPage";
 import Bio from "./Components/Bio";
 import NameTitle from "./Components/NameTitle";
+import Projects from "./Components/Projects";
 
 const App = ({ }) => {
     return (
@@ -11,6 +12,7 @@ const App = ({ }) => {
                 <NameTitle />
             </motion.div>
             <motion.div className="pages waves flip">
+                <Projects />
             </motion.div>
             <motion.div className="pages biopage" id="bio">
                 <Bio />

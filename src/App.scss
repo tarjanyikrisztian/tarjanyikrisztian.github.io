@@ -32,6 +32,16 @@ body {
     display: flex;
     position: relative;
 }
+.proj {
+    width: 60vw;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 200, 157, 0.5);
+    padding: clamp(1rem, 0.2rem + 4vw, 5rem);
+    font-size: var(--fs-s);
+}
 
 .bio {
     margin-left: clamp(0rem, -3.6rem + 18vw, 18rem);
@@ -155,6 +165,8 @@ body {
 
 .flip {
     background-image: url('./bg-waves-fliped.svg');
+    align-items: center;
+    justify-content: center;
 }
 .biopage{
     align-items: center;
