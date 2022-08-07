@@ -1,67 +1,73 @@
+//::-webkit-scrollbar{width: 0;}
+//@supports (scrollbar-color: red blue){* {scrollbar-width: none;}}
+
+:root{
+    --fs-xl: clamp(2.25rem, 2.15rem + 0.5vw, 2.75rem);
+    --fs-l: clamp(1.25rem, 1.1rem + 0.75vw, 2rem);
+    --fs-m: clamp(0.75rem, 0.6rem + 0.75vw, 1.5rem);
+    --fs-s: clamp(0.5rem, 0.35rem + 0.75vw, 1.25rem);
+    --fs-xs: clamp(0.5rem, 0.4rem + 0.5vw, 1rem);}
+
 body {
     margin: 0;
     font-family: 'Press Start 2P';
     color: white;
     overflow-x: hidden;
-    height: 100vh;
+    background-color: #000;
 }
 
 .containers {
+    background: #001122;
     height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
     scroll-snap-type: y proximity;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;   
 }
 
 .pages {
     height: 100vh;
     scroll-snap-align: center;
     display: flex;
-
-    &:nth-child(1) {
-        background: linear-gradient(#001122, #001128);
-    }
-
-    &:nth-child(2) {
-        background: linear-gradient(#001128, #001132);
-
-
-    }
-
+    position: relative;
     &:nth-child(3) {
-        background: linear-gradient(#001132, #001139);
         align-items: center;
         justify-content: center;
     }
 }
 
 .bio {
-    height: 75vh;
-    width: 60vw;
-    display: flex;
+    margin-left: clamp(0rem, -3.6rem + 18vw, 18rem);
+    margin-right: clamp(0rem, -3.6rem + 18vw, 18rem);
+    display:block;
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 130, 200, 0.5);
+    padding: clamp(1rem, 0.2rem + 4vw, 5rem);
+    font-size: var(--fs-s);
+    line-height: 1.5;
+    p{
+        margin: 0;
+    }
 }
 
 .gridLayout {
     height: 75vh;
-    width: 60vw;
+    width: 55vw;
     gap: 5vh;
     display: grid;
-    grid-template-rows: 10% 90%;
+    grid-template-rows: 15% 85%;
 }
 
 .card {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
 }
 
 .day {
     background-color: transparent;
-    font-size: 25pt;
+    font-size: var(--fs-m);
     margin: 0;
 
     span {
@@ -74,14 +80,21 @@ body {
 }
 
 .contact {
-    background-color: chocolate;
+    background-image: url('./blob-haikei.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 1rem;
+    padding-left: clamp(1rem, -0.8rem + 9vw, 10rem);
+    padding-right: clamp(1rem, -0.8rem + 9vw, 10rem);
+    display: inline-block;
+    background-size: cover;
 }
 
 .name {
     margin-top: 5vh;
     margin-left: 3vw;
 
-    p {
+    p{
         margin: 0;
     }
 
@@ -91,28 +104,17 @@ body {
 }
 
 .cd {
-    font-size: 20pt;
+    font-size: var(--fs-l);
     font-style: italic;
 }
 
-.cdin1 {
-    opacity: 0;
-    transform: translateY(3rem);
-    animation: fadeInUp 1500ms ease 2s forwards;
-}
-
-.cdin2 {
-    opacity: 0;
-    transform: translateY(3rem);
-    animation: fadeInUp 1500ms ease 2500ms forwards;
-}
 
 .kr {
     color: #d2691e;
 }
 
 .cursor {
-    font-size: 30pt;
+    font-size: var(--fs-xl);
 }
 
 .cursor::after {
@@ -150,27 +152,20 @@ body {
     justify-content: center;
 }
 
-@media only screen and (hover: none) and (pointer: coarse) {
-    .gridLayout {
-        width: 100vw;
-    }
+@media only screen and (max-width: 750px) {
 
     .bio {
         width: 100vw;
     }
-
-    .cursor {
-        font-size: 22pt;
-    }
-
-    .cd {
-        font-size: 16pt;
-    }
-
-    .day {
-        font-size: 14pt;
+}
+@media only screen and (max-width: 1700px) {
+    .gridLayout {
+        grid-template-rows: 25% 75%;
+        width: 100vw;
+        gap: 0;
     }
 }
+
 
 a {
     text-decoration: none !important;
