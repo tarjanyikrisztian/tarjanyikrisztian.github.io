@@ -53,7 +53,7 @@ body {
 
 .proj {
     width: 70vw;
-    height: 100vh;
+    height: 80vh;
     position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -130,6 +130,9 @@ body {
         background-color: rgba(0, 0, 0, 0.7);
         border: 2px solid rgb(255, 255, 255);
     }
+    a:visited, a:active {
+        color: inherit;
+      }
 
     .view {
         border: 2px solid rgb(255, 255, 255, 0.7);

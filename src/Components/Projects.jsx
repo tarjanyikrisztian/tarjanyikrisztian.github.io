@@ -7,12 +7,12 @@ const Projects = () => {
     return (
         <motion.div className="pages flip" id="projects">
             <div>
-                {/*<p style={{ margin: "1vw" }}>&lt;Projects /&gt;</p>*/}
+                <p style={{ margin: "1vw" }}>&lt;Projects/&gt;</p>
                 <motion.section className='proj'
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     exit={{ opacity: 0 }}>
-                    <div className="MyProject1 MyPr">
+                    {/*<div className="MyProject1 MyPr">
                         <div className="preview">v</div>
                         <section><p>Pathfinding Algorithms Visualization</p></section>
                         <section className="ViewCode">
@@ -22,7 +22,7 @@ const Projects = () => {
                         <div className="preview">v</div>
                         <section><p>This Portfolio Site</p></section>
                         <section className="ViewCode">
-                            <a className="view">Live Demo</a><a className="code">Code</a></section>
+                            <a className="view">Live Demo</a><a className="code" href="https://github.com/tarjanyikrisztian/tarjanyikrisztian.github.io" target="_blank">Code</a></section>
                     </div>
                     <div className="MyProject3 MyPr">
                         <div className="preview">v</div>
@@ -34,7 +34,7 @@ const Projects = () => {
                         <div className="preview">v</div>
                         <section><p>GitHub</p></section>
                         <section><a className="code rep" href="https://github.com/tarjanyikrisztian?tab=repositories" target="_blank">Repositories</a></section>
-                    </div>
+                    </div>*/}
                 </motion.section>
             </div>
         </motion.div>
