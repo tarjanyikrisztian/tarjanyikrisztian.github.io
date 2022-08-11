@@ -1,8 +1,15 @@
-::-webkit-scrollbar{width: 0;}
-@supports (scrollbar-color: red blue){* {scrollbar-width: none;}}
+::-webkit-scrollbar {
+    width: 0;
+}
+
+@supports (scrollbar-color: red blue) {
+    * {
+        scrollbar-width: none;
+    }
+}
 
 :root {
-    --fs-xl: clamp(2.25rem, 2.15rem + 0.5vw, 2.75rem);
+    --fs-xl: clamp(2.25rem, 2.05rem + 1vw, 3.25rem);
     --fs-l: clamp(1.25rem, 1.1rem + 0.75vw, 2rem);
     --fs-m: clamp(0.75rem, 0.6rem + 0.75vw, 1.5rem);
     --fs-s: clamp(0.5rem, 0.35rem + 0.75vw, 1.25rem);
@@ -14,11 +21,22 @@ body {
     font-family: 'Press Start 2P';
     color: white;
     overflow-x: hidden;
-    background-color: #000;
+    background: #000;
+
+
+}
+
+.loading {
+    background: #00010b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 .containers {
-    background: #001122;
+    background: #00010b;
     height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -34,19 +52,119 @@ body {
 }
 
 .proj {
-    width: 60vw;
-    height: 60vh;
+    width: 70vw;
+    height: 100vh;
     position: relative;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1vw;
+    padding: 1vw;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 200, 157, 0.5);
-    padding: clamp(1rem, 0.2rem + 4vw, 5rem);
+    //background-color: rgba(0, 200, 157, 0.2);
     font-size: var(--fs-s);
+    border-radius: 2vw;
+
+    .preview {
+        display: flex;
+        height: 90%;
+        width: 70%;
+        background-color: #000;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .MyProject1 {
+        background-color: rgba(3, 0, 200, 0.2);
+    }
+
+    .MyProject2 {
+        background-color: rgba(0, 200, 10, 0.2);
+    }
+
+    .MyProject3 {
+        background-color: rgba(187, 200, 0, 0.2);
+    }
+
+    .MyProject4 {
+        background-color: rgba(200, 0, 157, 0.2);
+    }
+
+    .MyPr {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr 1fr 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        justify-items: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        border-radius: 2vw;
+    }
+
+    .ViewCode {
+
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        position: relative;
+        display: inline-block;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5vw;
+
+
+    }
+
+    a {
+        font-size: var(--fs-xs);
+        border-radius: 1vw;
+    }
+
+    a:hover {
+        color: #d2691e;
+        background-color: rgba(0, 0, 0, 0.7);
+        border: 2px solid rgb(255, 255, 255);
+    }
+
+    .view {
+        border: 2px solid rgb(255, 255, 255, 0.7);
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-right: 1.5rem;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .code {
+        background-color: rgba(0, 0, 0, 0.5);
+        border: 2px solid rgb(255, 255, 255, 0.7);
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-left: 1.5rem;
+    }
+
+    .inp:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        border: 2px solid rgb(255, 255, 255, 0.7);
+        color: #fff;
+    }
+
+    .rep {
+        margin-left: 0;
+    }
+
 }
 
-.prj{
-    display: block;
+.eye {
+    bottom: -19rem;
 }
 
 .bio {
@@ -55,15 +173,25 @@ body {
     display: block;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 130, 200, 0.5);
+    background-color: rgba(200, 180, 0, 0.5);
     padding: clamp(1rem, 0.2rem + 4vw, 5rem);
-    font-size: var(--fs-s);
+    font-size: var(--fs-xs);
     line-height: 1.5;
+    position: relative;
 
     p {
         margin: 0;
+        //padding-left: clamp(0rem, -3rem + 15vw, 15rem);
+    }
+
+    .m-size {
+        font-size: var(--fs-m);
+        //padding-left: 0;
+        margin-bottom: 0.5rem;
     }
 }
+
+
 
 .gridLayout {
     height: 75vh;
@@ -77,7 +205,6 @@ body {
     width: 100vw;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -116,6 +243,7 @@ body {
     margin-left: 3vw;
     display: block;
     position: absolute;
+
     p {
         margin: 0;
     }
@@ -174,17 +302,27 @@ body {
     background-position: center;
     background-size: cover;
     display: flex;
+    background-color: #0d3943;
+    font-size: var(--fs-l);
 }
 
 .biopage {
     align-items: center;
     justify-content: center;
+    width: 100vw;
+
 }
 
 @media only screen and (max-width: 750px) {
 
     .bio {
         width: 100vw;
+        display: block;
+        position: relative;
+    }
+
+    .eye {
+        bottom: 0rem;
     }
 }
 
