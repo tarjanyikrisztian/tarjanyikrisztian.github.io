@@ -3,112 +3,13 @@ import { motion, useAnimation, useScroll } from "framer-motion";
 import '../App.scss';
 import TypedKr from "./TypedKr";
 import Yumi from "./Yumi";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
 
 const NameTitle = () => {
-    const particlesInit = useCallback(async (engine) => {
-        await loadFull(engine);
-    }, []);
+    
 
     
     return (
         <motion.div className="pages waves" >
-            <Particles id="tsparticles"
-                init={particlesInit}
-                options={{
-                    particles: {
-                        number: {
-                            value: 200,
-                            
-                        },
-                        color: {
-                            value: "#ffffff"
-                        },
-                        shape: {
-                            type: "edge",
-                            stroke: {
-                                width: 0,
-                                color: "#ffffff"
-                            }
-                        },
-                        opacity: {
-                            value: 1,
-                            random: true,
-                            anim: {
-                                enable: true,
-                                speed: 1,
-                                opacity_min: 0,
-                                sync: false
-                            }
-                        },
-                        size: {
-                            value: 5,
-                            random: true,
-                            anim: {
-                                enable: false,
-                                speed: 4,
-                                size_min: 0.3,
-                                sync: false
-                            }
-                        },
-                        line_linked: {
-                            enable: false,
-                            distance: 150,
-                            color: "#ffffff",
-                            opacity: 0.4,
-                            width: 1
-                        },
-                        move: {
-                            enable: true,
-                            speed: 1.5,
-                            direction: "none",
-                            random: true,
-                            straight: false,
-                            out_mode: "out",
-                            bounce: false,
-                            attract: {
-                                enable: true,
-                                rotateX: 600,
-                                rotateY: 600
-                            }
-                        }
-                    },
-                    interactivity: {
-                        detect_on: "window",
-                        events: {
-                            onhover: {
-                                enable: true,
-                                mode: "bubble"
-                            },
-                            onclick: {
-                                enable: true,
-                                mode: "repulse"
-                            },
-                            resize: true
-                        },
-                        modes: {
-                            grab: {
-                                distance: 400,
-                                line_linked: {
-                                    opacity: 1
-                                }
-                            },
-                            bubble: {
-                                distance: 100,
-                                size: 50,
-                                duration: 2,
-                                opacity: 0,
-                                speed: 3
-                            },
-                            repulse: {
-                                distance: 200,
-                                duration: 0.4
-                            }
-                        }
-                    },
-                    retina_detect: true
-                }} />
             <Yumi />
             <svg
                 xmlns="http://www.w3.org/2000/svg"
