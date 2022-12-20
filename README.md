@@ -1,1 +1,0 @@
-# tarjanyikrisztian.github.io

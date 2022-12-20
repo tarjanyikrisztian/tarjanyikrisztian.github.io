@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Stretch';
+  src: url('./assets/StretchPro.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Wavy';
+  src: url('./assets/Morelife.otf') format('opentype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  --color0: #EF476F;
+  --color1: #e26843;
+  --color2: #e6b543;
+  --color3: #05ce98;
+  --color4: #118AB2;
+  --color5: #753ba5;
+  overflow-x: hidden;
+
+  background-color: rgb(12, 12, 12);
+  color: rgb(255, 255, 255);
+
+  --bgColor: rgb(12, 12, 12);
+  --textColor: rgb(255, 255, 255);
+}
